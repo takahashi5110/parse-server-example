@@ -21,7 +21,7 @@ Parse.Cloud.define("pushsample", function (request, response) {
         console.log('##### PUSH ERROR');
       }
     },
-    useMasterKey: true
+    { useMasterKey: true }
   );
 
   response.success('pushsample done.');
