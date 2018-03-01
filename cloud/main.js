@@ -6,8 +6,8 @@ Parse.Cloud.define('hello', function(req, res) {
 
 Parse.Cloud.define("pushsample", function (request, response) {
   var query = new Parse.Query(Parse.Installation);
-
-  console.log('query: ' + query[0]);
+  query.equalTo('deviceType', 'ios');
+  console.log('query: ' + query.count({useMasterKey: true}));
 
   var data = {
     alert: "The Giants Mets 2-3."
