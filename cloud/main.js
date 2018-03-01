@@ -6,12 +6,15 @@ Parse.Cloud.define('hello', function(req, res) {
 
 Parse.Cloud.define("pushsample", function (request, response) {
   var query = new Parse.Query(Parse.Installation);
+
+  var data = {
+    alert: "The Giants Mets 2-3."
+  };
+
   Parse.Push.send(
     {
       where: query,
-      data: {
-        alert: "The Giants Mets 2-3."
-        }
+      data: data
     },
     {
       success: function() {
