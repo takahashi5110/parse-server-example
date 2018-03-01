@@ -5,5 +5,9 @@ Parse.Cloud.define('hello', function(req, res) {
 });
 
 Parse.Cloud.define("pushsample", function (request, response) {
-  response.success('pushsample is called');
+  response.success('pushsample start.');
+
+  Parse.initialize("eleeleele", "eleele", "eleeleeleeleeleele");
+
+  response.success('pushsample done.');
 });
