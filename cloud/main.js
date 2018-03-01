@@ -1,9 +1,11 @@
 
+
 Parse.Cloud.define('hello', function(req, res) {
   res.success('Hi');
 });
 
 Parse.Cloud.define("pushsample", function (request, response) {
+  Parse.initialize("eleeleele", "eleele", "eleeleeleeleeleele");
   var query = new Parse.Query(Parse.Installation);
 
   Parse.Push.send(
