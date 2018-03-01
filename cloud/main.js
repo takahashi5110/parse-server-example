@@ -6,6 +6,7 @@ Parse.Cloud.define('hello', function(req, res) {
 
 Parse.Cloud.define("pushsample", function (request, response) {
   Parse.initialize("eleeleele", "eleele", "eleeleeleeleeleele");
+  Parse.masterKey = 'eleeleeleeleeleele';
   var query = new Parse.Query(Parse.Installation);
 
   Parse.Push.send(
