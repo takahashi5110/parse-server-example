@@ -7,6 +7,8 @@ Parse.Cloud.define('hello', function(req, res) {
 Parse.Cloud.define("pushsample", function (request, response) {
   var query = new Parse.Query(Parse.Installation);
 
+  console.log('query: ' + query.count);
+
   var data = {
     alert: "The Giants Mets 2-3."
   };
@@ -18,14 +20,12 @@ Parse.Cloud.define("pushsample", function (request, response) {
     },
     {
       success: function() {
-        console.log('##### PUSH OK');
+        response.success('PUSH OK.');
       },
       error: function(error) {
-        console.log('##### PUSH ERROR');
+        response.success('PUSH ERROR.');
       },
       useMasterKey: true
     }
   );
-  
-  response.success('pushsample done.');
 });
