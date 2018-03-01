@@ -5,8 +5,7 @@ Parse.Cloud.define('hello', function(req, res) {
 });
 
 Parse.Cloud.define("pushsample", function (request, response) {
-  Parse.Cloud.useMasterKey();
   var query = new Parse.Query(Parse.Installation);
-  console.log('query: ' + query);
-  response.success('pushsample done.');
+  var log = 'query.count: ' + query.count({ useMasterKey: true });
+  response.success(log);
 });
