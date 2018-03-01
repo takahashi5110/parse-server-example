@@ -7,9 +7,13 @@ Parse.Cloud.define('hello', function(req, res) {
 Parse.Cloud.define("pushsample", function (request, response) {
   var query = new Parse.Query(Parse.Installation);
   Parse.Push.send({
-          data: {
-              alert: "The Giants Mets 2-3."
-          }
-      }, { useMasterKey: true });
+    where: query,
+    data: {
+      alert: "The Giants Mets 2-3."
+      }
+    },
+    { useMasterKey: true }
+  );
+  
   response.success('pushsample done.');
 });
