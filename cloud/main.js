@@ -19,7 +19,7 @@ Parse.Cloud.define("push", function (request, response) {
 
             // 	// 送信内容
             var payload = {
-                alert: "注文追加",
+                alert: "HerokuからPUSH",
                 status: "add"
             };
 
