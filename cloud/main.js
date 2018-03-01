@@ -7,7 +7,7 @@ Parse.Cloud.define('hello', function(req, res) {
 Parse.Cloud.define("pushsample", function (request, response) {
   var query = new Parse.Query(Parse.Installation);
 
-  console.log('query: ' + query[0].objectId);
+  console.log('query: ' + query[0]);
 
   var data = {
     alert: "The Giants Mets 2-3."
