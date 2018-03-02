@@ -11,6 +11,13 @@ if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
 }
 
+console.log('CLOUD_CODE_MAIN: ' + process.env.CLOUD_CODE_MAIN);
+console.log('APP_ID: ' + process.env.APP_ID);
+console.log('MASTER_KEY: ' + process.env.MASTER_KEY);
+console.log('CLIENT_KEY: ' + process.env.CLIENT_KEY);
+console.log('SERVER_URL: ' + process.env.SERVER_URL);
+console.log('PARSE_SERVER_PUSH: ' + process.env.PARSE_SERVER_PUSH);
+
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
