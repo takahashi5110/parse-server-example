@@ -6,7 +6,9 @@ Parse.Cloud.define('hello', function(req, res) {
 
 Parse.Cloud.define("pushsample", function (request, response) {
   var data = {
-    alert: "i am ele-parse-server!"
+    title: "HerokuParseApp",
+    alert: "i am ele-parse-server on Heroku!",
+    badge: 1
   };
 
   Parse.Push.send(
